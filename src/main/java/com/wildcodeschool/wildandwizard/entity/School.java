@@ -1,10 +1,14 @@
 package com.wildcodeschool.wildandwizard.entity;
 
+import javax.persistence.*;
+
 // TODO : update this entity
-
+@Entity
 public class School {
-
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String name;
     private Long capacity;
     private String country;
@@ -12,6 +16,7 @@ public class School {
     public School() {
     }
 
+    //getter and setter
     public Long getId() {
         return id;
     }
